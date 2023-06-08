@@ -1,0 +1,165 @@
+:root{
+    --body-color:#130c1e;
+    --border--color:#380c28;
+    --html-text-color: #ffffff;
+    --gep:15px;
+    --link-color:#e20d2a;
+}
+.gren {
+    color: #1DB954;
+}
+
+html{
+    color:var(--html-text-color);
+    background-color: var(--border--color);
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    width: 290px;
+    min-height:calc(100vh - var(--gep)*2);
+    padding: var(--gep);
+    background-color: var(--body-color);
+    box-shadow: 0px 0px 10px 0px rgba(255,255,255,0.3);
+    margin:0 auto;
+}
+
+h1, p, ul {
+    margin:0;
+    margin-bottom:var(--gep)
+}
+
+h1, p, footer{
+    text-align: center;
+}
+
+header{
+    position:relative;
+    margin-bottom: 40px;
+}
+
+.foto{
+    --size: 150px;
+
+    width: var(--size);
+    height: var(--size);
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    border: 2px solid var(--link-color);
+}
+
+.figure {
+    --size: 90px;
+
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+}
+
+h1{
+    position:absolute;
+    top:0;
+    left: 3%;
+    font-size: 26px;
+}
+
+.name{
+    position:absolute;
+    top:15%;
+    left: 4%;
+}
+
+.soundcloud{
+    height:69px;
+}
+
+a{
+    color: var(--link-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover, a:active, a:focus{
+    opacity: 0.7;
+}
+
+.buttons{
+    background-color:var(--html-text-color);
+    display: flex;
+    width: 100%;
+    height: 30px;
+    border-radius: 4px;
+    padding-bottom: 1px;
+    justify-content: center;
+    margin-top:20px;
+    align-items: center;
+    font-weight: bold;
+    font-size:16px;
+}
+
+footer{margin-top:auto;}
+
+@media screen and (min-width: 440px) {
+    body {
+        width: 410px;
+    }
+
+    .foto{
+        --avatar-size: 250px;
+
+        height: var(--avatar-size);
+        width: var(--avatar-size);
+    }
+
+    .figure {
+        --size: 112px;
+
+        width: var(--size);
+        height: var(--size);
+    }
+
+    .soundcloud{
+        height:100px;
+    }
+}
+
+@media screen and (min-width: 530px) {
+    body {
+        width: 500px;
+    }
+
+    .foto{
+        --avatar-size: 300px;
+
+        height: var(--avatar-size);
+        width: var(--avatar-size);
+    }
+
+    .figure {
+        --size: 135px;
+
+        width: var(--size);
+        height: var(--size);
+    }
+
+    h1{
+        font-size:32px;
+    }
+
+    .soundcloud{
+        height:110px;
+    }
+
+    .buttons{
+        height:40px;
+        font-size:20px;
+    }
+  
+    .text{
+        font-size: 18px;
+    }
+}
